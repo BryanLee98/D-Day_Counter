@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet" />
+    <script src="./index.js" defer></script>
+    <!-- html에서 script 태그의 위치도 중요하다. 위에서 아래로 해석을 할 때, 
+     script 태그를 만나면 밑의 html body 태그 부분을 읽지 않는데, 
+     그걸 해결할 수 있는 방법이 바로 defer -->
+  </head>
+  <body>
+    <h1>D-Day</h1>
+    <div id="D-day-Container">
+      <div class="D-day_Child_Container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+      <div class="D-day_Child_Container">
+        <span id="hours">0</span>
+        <span>시</span>
+      </div>
+      <div class="D-day_Child_Container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+      <div class="D-day_Child_Container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+    <div id="d-day-message"></div>
+    <div id="target_Selector" class="yearBox">
+      <input placeholder="년도" id="target_year" class="targetInput" size="5" />
+      -
+      <input placeholder="월" id="target_month" class="targetInput" size="5" />
+      -
+      <input placeholder="일" id="target_date" class="targetInput" size="5" />
+    </div>
+    <br />
+    <button onclick="starter()" id="start-btn">카운트를 시작하겠습니다</button>
+  </body>
+</html>
